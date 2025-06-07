@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  @import 'swiper/css';
+  @import 'swiper/css/navigation';
+  @import 'swiper/css/pagination';
+}
+
+
+
+
+
+:root {
+  --font-default: 'Pelak', sans-serif;
+  --font-heading: 'Morabba', sans-serif;
+}
+
+.light-mode {
+
+  --color-default: #1e1e1e;
+  --color-background: #f3f4f6;
+}
+
+.dark-mode {
+  --color-background: #212121;
+  --color-default: #f3f4f6;
+  /* --color-accent: #4A90E2; */
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-default);
+  overflow-x: hidden;
+  color: var(--color-default);
+
+
+}
+
+header {
+  background-color: var(--color-background);
+}
+
+
+
+
+
+
+
+
+.btn-primary {
+  @apply h-[75px] px-[30px] transition-all duration-300 text-white rounded-[18px] flex items-center gap-2 bg-primary hover:bg-primary-hover;
+}
+
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: var(--font-heading);
+
+}
+
+.h1 {
+  @apply text-[64px] lg:text-[84px] leading-none;
+}
+
+.h2 {
+  @apply text-[50px] leading-tight;
+}
+
+.h3 {
+  @apply text-[25px];
+}
+
+/* From Uiverse.io by andrew-demchenk0 */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked+.slider {
+  background-color: #183153;
+}
+
+.input:focus+.slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked+.slider:before {
+  transform: translateX(30px);
+}
+
+
+
+
+@layer base {
+  body {
+    --sb-track-color: #232E33;
+    --sb-thumb-color: #f78f9b;
+    --sb-size: 13px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 20px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 20px;
+    border: 1px solid #232E33;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
+}
+
+
+#swiperImg {
+  position: relative;
+  height: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 90%;
+  height: 181px;
+  object-fit: cover;
+}
+
+swiper-container {
+  --swiper-navigation-color: #00a4b0;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-active-color: #f472b6;
+  --swiper-pagination-color: #f472b6;
+  --swiper-pagination-bullet-inactive-color: #00a4b0;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+
+}
+
+
+
+  .swiper-pagination-bullet {
+    background-color: #00a4b0;
+    opacity: 0.5;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #00a4b0; 
+    opacity: 1;
+  }
