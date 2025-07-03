@@ -21,17 +21,25 @@
     <header
       class="flex justify-between flex-col  z-20 rounded-3xl shadow-lg absolute top-8 right-8 left-8 pt-3 max-w-screen-xl mx-auto">
 
-      <div class="topBar bg-accent/10 rounded-full  flex justify-between items-center px-5 mx-3 py-4 sticky top-0 z-50">
-        <div>
-          <i class="ri-search-line text-accent font-bold cursor-pointer text-lg bg-white rounded-full p-2"></i>
+      <div
+        class="topBar bg-accent/10 rounded-full  flex justify-between items-center px-10 mx-3 py-4 sticky top-0 z-50">
+        <!-- <div>
+          <i class="ri-search-line text-accent font-bold cursor-pointer text-lg rounded-full p-2 socialIcons"></i>
+        </div> -->
+        <div class="space-x-10 ">
+          <a href="https://www.instagram.com/dr.nayernaebi" target="_blank">
+            <i
+              class="ri-whatsapp-line text-accent text-lg cursor-pointer  rounded-full p-2 socialIcons hover:bg-primary-hover hover:text-white"></i>
+          </a>
+          <a href="https://wa.me/09148149517?text=سلام وقت بخیر از طریق سایتتون آشنا  شدم برای دریافت مشاوره">
+            <i
+              class="ri-instagram-line text-accent text-lg cursor-pointer  rounded-full p-2 socialIcons hover:bg-primary-hover hover:text-white"></i>
+          </a>
+
+
         </div>
-        <div class="space-x-2">
-          <i class="ri-whatsapp-line text-accent text-lg cursor-pointer bg-white rounded-full p-2"></i>
-          <i class="ri-instagram-line text-accent text-lg cursor-pointer bg-white rounded-full p-2"></i>
-          <i class="ri-telegram-2-line text-accent text-lg cursor-pointer bg-white rounded-full p-2"></i>
-        </div>
         <div>
-          <label class="switch">
+          <label class="switch cursor-pointer ">
             <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g fill="#ffd43b">
                   <circle r="5" cy="12" cx="12"></circle>
@@ -65,25 +73,51 @@
             </i>
           </div>
 
-          <ul class="lg:flex items-center gap-2 justify-center  hidden">
+          <ul class="lg:flex items-center gap-8 justify-center relative  hidden">
             <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">صفحه
                 اصلی</a>
-            <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">خدمات
-                ما<i class="ri-arrow-down-s-fill"></i></a>
-            <li><a href="#"
-                class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">مراقبت های پس از
-                درمان</a>
-            <li><a href="#"
-                class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">گالری</a>
-            <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">بیمه
-                های طرف قرارداد</a>
-            <li><a href="#"
-                class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">وبلاگ</a>
-            <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">رزرو
-                آنلاین</a>
-            <li></li><a href="#"
-              class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">درباره ما<i
-                class="ri-arrow-down-s-fill"></i></a>
+
+            </li>
+
+            <li><a href="#service"
+                class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2 ">خدمات
+                ما</a>
+
+            </li>
+
+
+
+
+
+            <li><a href="#gallery"
+                class=" hover:bg-accent hover:text-white  transition-all duration-300 p-2 rounded-full">گالری</a>
+            </li>
+
+
+
+
+            <li class="relative group">
+              <a href="./aboutUs.html" target="_blank" class="flex items-center gap-1"
+                class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2 ">
+                درباره ما
+                <i class="ri-arrow-down-s-fill"></i>
+              </a>
+
+              <ul
+                class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-40 z-50 text-right">
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">عصب کشی</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">خرید دندان</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">تولید دندان</a></li>
+              </ul>
+            </li>
+
+
+
+            <li><a href="./contactUs.html"
+                class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">تماس با ما</a>
+            </li>
+
+
 
 
           </ul>
@@ -92,10 +126,10 @@
 
 
 
-        <div class="flex items-center">
+        <div class="lg:flex hidden cursor-pointer items-center" onclick="openModal('modelConfirm')">
           <div class="flex flex-col  gap-2 mt-5">
-            <a href="#" class="text-accent text-2xl font-bold" onclick="openModal('modelConfirm')">رزرو نوبت</a>
-            <span>021-123458</span>
+            <a href="#" class="text-accent text-2xl font-bold">رزرو نوبت</a>
+            <span>021-123456</span>
           </div>
           <div class="pt-5">
             <i class="ri-phone-fill text-accent font-bold text-5xl"></i>
@@ -106,27 +140,79 @@
       </div>
 
       <nav class="responsiveNav">
+
+
         <ul class="lg:hidden space-y-2 p-3 text-black hidden transition-all duration-500 ease-in-out" id="navList">
           <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">صفحه
               اصلی</a>
-          <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">خدمات
-              ما<i class="ri-arrow-down-s-fill"></i></a>
-          <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">مراقبت
+
+          </li>
+
+
+          <li class="group lg:relative">
+            <a href="#"
+              class="flex items-center gap-1 hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">
+              خدمات ما
+
+              <i class="ri-arrow-down-s-fill"></i>
+            </a>
+
+            <ul
+              class="hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-full text-right lg:absolute lg:w-40">
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">ایمپلنت</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">طراحی دندان</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">تولید دندان</a></li>
+            </ul>
+          </li>
+
+
+          <li>
+            <a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">مراقبت
               های پس از
               درمان</a>
+          </li>
+
           <li><a href="#"
               class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">گالری</a>
+          </li>
+
+
           <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">بیمه
               های طرف قرارداد</a>
+          </li>
+
           <li><a href="#"
               class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">وبلاگ</a>
+          </li>
+
+
           <li><a href="#" class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">رزرو
               آنلاین</a>
-          <li></li><a href="#"
-            class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">درباره ما<i
-              class="ri-arrow-down-s-fill"></i></a>
+          </li>
 
+          <li class="group lg:relative">
+            <a href="#"
+              class="flex items-center gap-1 hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">
+              خدمات ما
+              <i class="ri-arrow-down-s-fill"></i>
+            </a>
 
+            <ul
+              class="hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-full text-right lg:absolute lg:w-40">
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">خرابی دندان</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">طراحی دندان</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">تولید دندان</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="flex lg:hidden items-center">
+              <div class="flex flex-col  gap-2 mt-5">
+                <a href="#" class="text-accent text-2xl font-bold" onclick="openModal('modelConfirm')">رزرو نوبت</a>
+              </div>
+
+            </div>
+          </li>
         </ul>
       </nav>
 
@@ -211,31 +297,31 @@
     </header>
 
     <section class="hero pt-96 text-center text-slate-50">
-      <h1 class="h2 drop-shadow-lg">کلینیک دندانپزشکی دکتر نایبی</h1>
-      <p class="lg:mt-8 mt-4 drop-shadow-lg text-xl ">
-        با اعتماد به نفس لبخند بزنید، با دکتر نایبی بدرخشید!
+      <h1 class="lg:text-5xl text-2xl font-bold drop-shadow-lg">کلینیک دندانپزشکی دکتر نیر نائبی</h1>
+      <p class="lg:mt-8 mt-4 drop-shadow-lg lg:text-xl text-sm ">
+        با اعتماد به نفس لبخند بزنید، با دکتر نائبی بدرخشید!
       </p>
     </section>
 
   </div>
 
 
-  <main class="container px-5">
+  <main class="container mx-auto">
     <section data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-      class="onlineReserve shadow-lg absolute lg:h-[120px] h-auto rounded-3xl left-0 right-0 lg:-bottom-[100px] -bottom-[280px] mb-10 z-10 flex flex-col items-center justify-center gap-4 max-w-screen-xl mx-auto bg-white lg:p-0 p-2">
-      <div class="lg:flex lg:flex-row flex-col  items-end justify-between w-full px-3 ">
+      class="onlineReserve lg:text-start text-center shadow-lg absolute lg:h-[120px] h-auto rounded-xl left-0 right-0 lg:-bottom-[100px] -bottom-[280px] mb-10 z-10 flex flex-col items-center justify-center gap-4 max-w-screen-xl mx-auto bg-white lg:p-0 p-2">
+      <div class="lg:flex lg:flex-row flex-col  items-center justify-between w-full px-3 ">
         <div class="lg:flex items-center justify-center gap-4 lg:flex-row flex-col">
-          <div class="reserveIcon">
+          <div class="reserveIcon ">
             <i class="ri-calendar-check-line text-accent  text-6xl"></i>
           </div>
 
-          <div class="reserveContent text-start ">
+          <div class="reserveContent lg:text-start ">
             <h2 class="text-2xl font-bold pb-2 text-black">رزرو آنلاین نوبت</h2>
             <p class="text-slate-600">برای رزرو آنلاین نوبت، لطفا روی دکمه زیر کلیک کنید.</p>
           </div>
         </div>
         <div
-          class="flex justify-between gap-10 items-center bg-primary px-5 py-2 rounded-full hover:bg-primary-hover transition-all duration-300">
+          class="flex justify-between gap-2 items-center bg-primary px-2 py-2  lg:w-auto lg:items-center lg:mx-0 w-2/3 mx-auto rounded-xl hover:bg-primary-hover transition-all duration-300 ">
           <button class="font-bold text-white"><a href="https://wa.me/989149370460" target="_blank">همین حالا رزرو
               کنید</a></button>
           <i class="ri-arrow-left-line text-white text-2xl"></i>
@@ -250,7 +336,7 @@
     <section class="service container mx-auto lg:mt-36 mt-72 px-9 pt-8 ">
 
 
-      <div class="lg:flex lg:flex-row items-center  lg:justify-between flex-col justify-center gap-8">
+      <div class="lg:flex lg:flex-row items-center  lg:justify-between flex-col justify-center gap-8" id="service">
         <div class="lg:w-1/2 w-full">
           <div class="Service flex items-center gap-3 mb-8">
             <i class="ri-tooth-fill text-accent text-6xl"></i>
@@ -267,111 +353,139 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="2000">
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8  hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div data-aos="fade-up" data-aos-delay="500">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 text-center cursor-pointer transition-all duration-300 border-b-8 border-accent hover:border-t-8  hover:border-b-0 ">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">ارتودنسی</h3>
+              <p class="text-gray-600 text-sm">مرتب کردن دندان‌ها و اصلاح دندان های...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">ارتودنسی</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
+
           </div>
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8  hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+
+          <div data-aos="fade-up" data-aos-delay="550">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 cursor-pointer  text-center border-b-8 border-accent hover:border-t-8  hover:border-b-0 transition-all duration-200">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">زیبایی دندان</h3>
+              <p class="text-gray-600 text-sm">مجموعه‌ای از روش‌ها مانند بلچینگ...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">زیبایی دندان</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
           </div>
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+
+
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 text-center cursor-pointer border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">پروتز</h3>
+              <p class="text-gray-600 text-sm">جایگزینی دندان‌های از دست رفته با...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">پروتز</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
           </div>
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+
+          <div data-aos="fade-up" data-aos-delay="650">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 text-center cursor-pointer border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">جراحی</h3>
+              <p class="text-gray-600 text-sm">شامل کشیدن دندان عقل، جراحی لثه و دیگر...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">جراحی</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
           </div>
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+
+
+          <div data-aos="fade-up" data-aos-delay="700">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 text-center cursor-pointer border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">لمینت</h3>
+              <p class="text-gray-600 text-sm"> پوسته‌های نازک سرامیکی یا کامپوزیتی که برای...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">لمینت</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
           </div>
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+
+          <div data-aos="fade-up" data-aos-delay="750">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 text-center cursor-pointer border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">ایمپلنت</h3>
+              <p class="text-gray-600 text-sm">یک ریشه دندان مصنوعی از جنس تیتانیوم که...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">ایمپلنت</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
           </div>
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+
+
+          <div data-aos="fade-up" data-aos-delay="800">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 cursor-pointer text-center border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">کودکان</h3>
+              <p class="text-gray-600 text-sm">مراقبت، پیشگیری و درمان تخصصی...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">کودکان</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
           </div>
-          <div
-            class="bg-white rounded-3xl shadow-md p-4 text-center border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
-            <div class="flex justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
-                height="50" class="text-accent" fill="currentColor">
-                <path
-                  d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
-                </path>
-              </svg>
+
+          <div data-aos="fade-up" data-aos-delay="850">
+            <div
+              class="bg-white rounded-3xl shadow-md p-4 text-center cursor-pointer border-b-8 border-accent hover:border-t-8 hover:border-b-0 transition-all duration-200">
+              <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="50"
+                  height="50" class="text-accent" fill="currentColor">
+                  <path
+                    d="m22.5,13H1.5c-.827,0-1.5.673-1.5,1.5v5c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-5c0-.827-.673-1.5-1.5-1.5Zm-5.5,1h3v3.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5Zm-1,3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25h3.5v3.25Zm-9,.25c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-3.5h3v3.5Zm1-3.5h3.5v3.25c0,.965-.785,1.75-1.75,1.75s-1.75-.785-1.75-1.75v-3.25Zm15,5.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5v-5c0-.275.224-.5.5-.5h1.5v3.5c0,1.379,1.122,2.5,2.5,2.5.858,0,1.617-.435,2.067-1.096.503.662,1.29,1.096,2.183,1.096.931,0,1.752-.467,2.25-1.177.498.71,1.319,1.177,2.25,1.177.893,0,1.68-.435,2.183-1.096.45.661,1.208,1.096,2.067,1.096,1.378,0,2.5-1.121,2.5-2.5v-3.5h1.5c.276,0,.5.225.5.5v5ZM19.5,0H4.5C2.019,0,0,2.019,0,4.5v5c0,.827.673,1.5,1.5,1.5h21c.827,0,1.5-.673,1.5-1.5v-5c0-2.481-2.019-4.5-4.5-4.5Zm-2.5,6.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5h-3v-3.5Zm-1,3.5h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3.5v-4.25c0-.965.785-1.75,1.75-1.75s1.75.785,1.75,1.75v4.25Zm-4.5,0h-3v-3.5c0-.827.673-1.5,1.5-1.5s1.5.673,1.5,1.5v3.5Zm16-.5c0,.275-.224.5-.5.5h-1.5v-3.5c0-1.379-1.122-2.5-2.5-2.5-.664,0-1.266.265-1.714.689-.416-.991-1.396-1.689-2.536-1.689-.931,0-1.752.467-2.25,1.177-.498-.71-1.319-1.177-2.25-1.177-1.141,0-2.12.698-2.536,1.689-.448-.424-1.049-.689-1.714-.689-1.378,0-2.5,1.121-2.5,2.5v3.5h-1.5c-.276,0-.5-.225-.5-.5v-5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v5Z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-2xl text-gray-800 mb-2">ترمیم</h3>
+              <p class="text-gray-600 text-sm">بازسازی ساختار دندان‌های پوسیده...</p>
             </div>
-            <h3 class="font-bold text-2xl text-gray-800 mb-2">ترمیم</h3>
-            <p class="text-gray-600 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی...</p>
           </div>
+
         </div>
 
       </div>
@@ -379,7 +493,7 @@
 
 
 
-    <section class="gallery container mx-auto mt-36 px-9 flex flex-col justify-center mb-20 pb-32">
+    <section class="mySwiper container mx-auto mt-20 px-9 flex flex-col justify-center mb-20 pb-20" id="gallery">
       <div class="Service flex items-center gap-3 mb-8">
         <i class="ri-tooth-fill text-accent text-6xl"></i>
         <div class="flex flex-col justify-start">
@@ -419,7 +533,7 @@
 
 
 
-    <section class="about rounded-2xl container mx-auto mt-12 px-6 mb-20 lg:flex items-center justify-center">
+    <section class="about rounded-2xl container mx-auto  px-6 mb-20 lg:flex items-center justify-center">
       <div class=" mt-6 md:mt-0 lg:mx-0" data-aos="zoom-in">
         <img src="./assets/img/about.jpg" alt="Dental Clinic"
           class="rounded-xl w-[550px] h-[550px] object-cover lg:mx-0 mx-auto ">
@@ -449,17 +563,17 @@
       </div>
 
       <div class="relative max-w-6xl mx-auto">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper" data-aos="fade-up" data-aos-duration="3000">
+        <div class="swiper mySwiper overflow-hidden">
+          <div class="swiper-wrapper items-stretch" data-aos="fade-up" data-aos-duration="3000">
 
-            <div class="swiper-slide">
-
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto">
+            <div class="swiper-slide h-auto flex">
+              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
                 <div>
                   <img src="./assets/img/elon.jpg" alt="DrNaebi|customer"
                     class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
                 </div>
-                <p class="text-gray-700 leading-relaxed">تجربه‌ی من در این کلینیک واقعاً شبیه یک سفر علمی به آینده بود.
+                <p class="text-gray-700 leading-relaxed flex-1">تجربه‌ی من در این کلینیک واقعاً شبیه یک سفر علمی به
+                  آینده بود.
                   تکنولوژی لیزر و اسکن‌های سه‌بعدی‌ شون جوری بود که حس کردم وسط آزمایشگاه اسپیس‌ایکس هستم. اگه قرار باشه
                   مارس رو کلون کنیم، امیدوارم اون‌جا هم همچین دندانپزشکی‌هایی باشه. شاید بشه درمان ریشه رو با نور ستاره
                   انجام داد...</p>
@@ -467,14 +581,14 @@
               </div>
             </div>
 
-            <div class="swiper-slide">
-
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto">
+            <div class="swiper-slide h-auto flex">
+              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
                 <div>
                   <img src="./assets/img/nietzsche.jpg" alt="DrNaebi|customer"
                     class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
                 </div>
-                <p class="text-gray-700 leading-relaxed">درد، آن آموزگار بزرگ است. هنگام درمان ریشه، در لحظه‌ای که مته
+                <p class="text-gray-700 leading-relaxed flex-1">درد، آن آموزگار بزرگ است. هنگام درمان ریشه، در لحظه‌ای
+                  که مته
                   به
                   گوشت می‌رسد، انسان نه تنها با ضعف جسم، بلکه با حقیقت وجود خود روبه‌رو می‌شود.
                   اما دندان‌پزشک این کلینیک، با اراده‌ای معطوف به دقت و زیبایی، کاری کرد که درد، به خنده‌ای دیونیزوسی
@@ -486,14 +600,15 @@
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto">
+            <div class="swiper-slide h-auto flex">
+              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
                 <div>
                   <img src="./assets/img/lion.jpg" alt="DrNaebi|customer"
                     class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
                 </div>
 
-                <p class="text-gray-700 leading-relaxed">تجربه‌ام بعد از دندانپزشکی واقعاً جالب بود. کار دکتر خیلی سریع
+                <p class="text-gray-700 leading-relaxed flex-1">تجربه‌ام بعد از دندانپزشکی واقعاً جالب بود. کار دکتر
+                  خیلی سریع
                   تموم شد و اصلاً انتظار نداشتم این‌قدر زود تمام بشه. به دکتر گفتم که چطور این‌قدر سریع شد، اونم با خنده
                   گفت که خودتم بعداً می‌فهمی چی شد.</p>
                 <p class="text-sm font-bold text-right mt-4 text-gray-900">سیامک باقری</p>
@@ -501,18 +616,19 @@
             </div>
 
 
-            <div class="swiper-slide">
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto">
+            <div class="swiper-slide h-auto flex">
+              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
                 <div>
                   <img src="./assets/img/wolf.jpg" alt="DrNaebi|customer"
-                    class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
+                    class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg ">
                 </div>
-                <p class="text-gray-700 leading-relaxed">دندونم حسابی درد می‌کرد و با استرس رفتم پیش دکتر. نزدیک به دو
+                <p class="text-gray-700 leading-relaxed flex-1">دندونم حسابی درد می‌کرد و با استرس رفتم پیش دکتر. نزدیک
+                  به دو
                   ساعت منتظر موندم متاسفانه. بهم مسکن دادن و
                   گفتن که بی‌حسی می‌زنن، چیزی حس نمی‌کنی. کار دکتر خیلی خوب بود. بعدش دیگه نفهمیدم درد رفع شده یا فقط
                   یادم
                   رفت بهش فکر کنم!</p>
-                <p class="text-sm font-bold text-right mt-4 text-gray-900">مهران ناصر</p>
+                <p class="text-sm font-bold text-right mt-4 text-gray-900">ناصر</p>
               </div>
             </div>
 
@@ -520,8 +636,8 @@
 
           <div class="swiper-pagination mt-6 color-access"></div>
 
-          <div class="swiper-button-next text-primary"></div>
-          <div class="swiper-button-prev text-primary"></div>
+          <div class="swiper-button-next text-primary bg-primary/35 p-7 rounded-full"></div>
+          <div class="swiper-button-prev text-primary bg-primary/35 p-7 rounded-full"></div>
         </div>
       </div>
     </section>
@@ -529,7 +645,7 @@
   </main>
 
   <section class="fixed bottom-0 left-0 right-0 flex z-50">
-    <a href="whatsapp">
+    <a href="//wa.me/989123456789?text=سلام%20وقت%20بخیر" target="_blank">
       <svg
         class="animate-bounce	 e-font-icon-svg e-fab-whatsapp w-[62px] h-[62px] m-5 p-1 cursor-pointer bg-green-500 rounded-xl"
         fill="white" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -542,68 +658,70 @@
 
 
 
-  <footer class="flex flex-col items-center justify-between container mx-auto mt-12 px-6 pt-8">
-    <div class="flex flex-col lg:flex-row bg-gray-300 rounded-3xl justify-between w-full lg:gap-3 gap-2 px-12 py-5">
-      <div class="flex flex-col items-start justify-center">
+
+
+  <footer class="flex flex-col items-center justify-between w-full mt-12 px-4 sm:px-6 lg:px-12 pt-8">
+    <div class="flex flex-col lg:flex-row bg-gray-300 rounded-3xl justify-between w-full gap-4 px-6 sm:px-8 py-5">
+      <div class="flex-1 flex flex-col items-start justify-center gap-1">
         <h3 class="h3 text-accent">مشاوره رایگان</h3>
-        <p class=" text-sm">برای مشاوره رایگان با ما تماس بگیرید</p>
+        <p class="text-sm">برای مشاوره رایگان با ما تماس بگیرید</p>
       </div>
-      <div class="flex flex-col items-start justify-center">
+      <div class="flex-1 flex flex-col items-start justify-center gap-1">
         <h3 class="h3 text-accent">پشتیبانی رایگان</h3>
-        <p class=" text-sm"> پاسخگویی در هر ساعت</p>
+        <p class="text-sm">پاسخگویی در هر ساعت</p>
       </div>
-      <div class="flex flex-col items-start justify-center">
-        <h3 class="h3 text-accent"> رزرو آنلاین سریع</h3>
-        <p class=" text-sm"> سریع ایمن، بئون هزینه</p>
+      <div class="flex-1 flex flex-col items-start justify-center gap-1">
+        <h3 class="h3 text-accent">رزرو آنلاین سریع</h3>
+        <p class="text-sm">سریع، ایمن، بدون هزینه</p>
       </div>
-      <div class="lg:flex lg:flex-row flex-col items-center gap-1">
-        <input name="phone" type="tel" required="" pattern="09[0-9]{9}" autocomplete="tel"
-          class="block text-black rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
-          placeholder="09*********" value="">
+      <div class="flex flex-col sm:flex-row items-center gap-2 mt-2 lg:mt-0">
+        <input name="phone" type="tel" required pattern="09[0-9]{9}" autocomplete="tel"
+          class="w-full sm:w-auto text-black rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+          placeholder="09*********">
         <button type="submit"
-          class="bg-primary hover:bg-primary-hover text-white px-8 py-2 rounded-md transition cursor-pointer">
-          ارسال
+          class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-md transition cursor-pointer">
+          ثبت
         </button>
       </div>
-
-
-
     </div>
 
-    <div class="flex flex-col lg:flex-row items-center justify-between w-full gap-8  px-12  py-5 mt-12">
-      <div class="knowAbout flex flex-col items-start justify-between gap-5 lg:w-1/3 w-full">
+    <div class="flex flex-col lg:flex-row items-start justify-between w-full gap-8 px-6 sm:px-8 py-5 mt-12">
+      <div class="flex flex-col gap-4 lg:w-1/3 w-full">
         <h2 class="h3 text-accent pb-3 border-b-2 border-dashed border-accent">مختصری از ما بدانید!</h2>
-        <p class=" text-sm text-justify">کلینیک دندان‌پزشکی دکتر نائبی با بیش از یک دهه تجربه در ارائه
-          خدمات
-          دندان‌پزشکی، به عنوان یکی از بهترین مراکز درمانی در زمینه زیبایی و درمان‌های تخصصی شناخته می‌شود. ما با
-          استفاده از تکنولوژی‌های پیشرفته و تیم متخصص، بهترین خدمات را به مراجعین خود ارائه می‌دهیم.</p>
-
+        <p class="text-sm text-justify">
+          کلینیک دندان‌پزشکی دکتر نائبی با بیش از یک دهه تجربه در ارائه خدمات دندان‌پزشکی، به عنوان یکی از بهترین مراکز
+          درمانی در زمینه زیبایی و درمان‌های تخصصی شناخته می‌شود. ما با استفاده از تکنولوژی‌های پیشرفته و تیم متخصص،
+          بهترین خدمات را به مراجعین خود ارائه می‌دهیم.
+        </p>
       </div>
 
-      <div class="quickAccess flex flex-col items-start justify-between gap-5 mt-3 lg:w-1/3 w-full pr-5">
+      <div class="flex flex-col gap-4 lg:w-1/3 w-full">
         <h2 class="h3 text-accent pb-3 border-b-2 border-dashed border-accent">دسترسی سریع</h2>
-        <ul class="flex flex-col items-start justify-center gap-2">
-          <li><a href="#home" class=" hover:text-primary transition">خانه</a></li>
-          <li><a href="#services" class=" hover:text-primary transition">خدمات</a></li>
-          <li><a href="#gallery" class=" hover:text-primary transition">گالری</a></li>
-          <li><a href="#about" class=" hover:text-primary transition">درباره ما</a></li>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="#home" class="hover:text-primary transition">خانه</a></li>
+          <li><a href="#services" class="hover:text-primary transition">خدمات</a></li>
+          <li><a href="#gallery" class="hover:text-primary transition">گالری</a></li>
+          <li><a href="#about" class="hover:text-primary transition">درباره ما</a></li>
         </ul>
       </div>
 
-      <div class="address flex flex-col items-start justify-between gap-3 lg:w-1/3 w-full">
-
+      <div class="flex flex-col gap-3 lg:w-1/3 w-full text-sm">
         <h2 class="h3 text-accent pb-3 border-b-2 border-dashed border-accent">میزبان حضور و صدای گرمتان هستیم</h2>
-        <p class="text-sm"><i class="ri-map-pin-2-fill pl-1"></i>آدرس: تهران، خیابان ولیعصر، نبش خیابان
-          طالقانی، پلاک 123</p>
-        <p class=" text-sm"><i class="ri-phone-fill pl-1"></i>تلفن: 021-12345678</p>
-        <p class=" text-sm"><i class="ri-mail-fill pl-1"></i>ایمیل: www.gmail.com</p>
+        <p><i class="ri-map-pin-2-fill pl-1"></i>آدرس: تهران، خیابان ولیعصر، نبش خیابان طالقانی، پلاک 123</p>
+        <p><i class="ri-phone-fill pl-1"></i>تلفن: ۱۲۳</p>
+        <p><i class="ri-mail-fill pl-1"></i>ایمیل: www.gmail.com</p>
       </div>
-
-
     </div>
 
-    <div class="copyright  mt-12 py-5">
-      <span class="text-sm text-slate-500 text-center">تمامی حقوق برای کلینیک دندانپزشکی نائبی محفوظ است.
+    <div class="copyright mt-12 text-center w-full">
+      <span class="text-sm text-slate-500">
+        تمامی حقوق برای کلینیک دندانپزشکی نیر نائبی محفوظ است.
+      </span>
+    </div>
+    <div>
+      <span class="text-center text-slate-500 text-sm">
+        تمامی حقوق برای
+        روه هشیتو محفوظ است
       </span>
     </div>
   </footer>
@@ -614,10 +732,11 @@
 
 
 
+
   <script src="./src/main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+  <script src="./node_modules/swiper/swiper-element-bundle.min.js"></script>
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -645,7 +764,8 @@
     AOS.init();
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  <!-- <script src="./node_modules/swiper/swiper-bundle.min.js"></script> -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const swiper = new Swiper('.mySwiper', {
@@ -671,9 +791,42 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Swiper برای بخش نظرات (Comments)
+      const swiperComments = new Swiper('.mySwiper', {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          }
+        }
+      });
+
+      // اگر از swiper-element برای گالری استفاده می‌کنید، نیازی به این کد نیست:
+      // const swiperGallery = document.querySelector('#swiperGallery .mySwiperGallery');
+      // if (swiperGallery) {
+      //   swiperGallery.swiper.update(); // یا هر عملیات دیگر نیاز
+      // }
+    });
+  </script>
 
 
 
+  <script src="./node_modules/swiper/swiper.js"></script>
 
 </body>
 
