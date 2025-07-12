@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DentistSite</title>
@@ -60,7 +62,7 @@
       </div>
 
       <div class="header px-3 w-full justify-between items-center py-2 flex gap-2 sticky">
-        <img src="./assets/img/423432.png" alt="DrNaebi|logo" class="w-[130px]">
+        <img src="./assets/img/t.PNG" alt="DrNaebi|logo" class="w-[130px]">
 
         <nav class="relative">
           <div class="relative w-10 h-10 flex lg:hidden mx-auto z-50">
@@ -493,7 +495,7 @@
 
 
 
-    <section class="mySwiper container mx-auto mt-20 px-9 flex flex-col justify-center mb-20 pb-20" id="gallery">
+    <section class="container mx-auto mt-20 px-9 flex flex-col justify-center mb-20 pb-20" id="gallery">
       <div class="Service flex items-center gap-3 mb-8">
         <i class="ri-tooth-fill text-accent text-6xl"></i>
         <div class="flex flex-col justify-start">
@@ -503,31 +505,41 @@
       </div>
 
       <div id="swiperImg" data-aos="fade-up" data-aos-duration="2000">
-        <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true" mousewheel="true"
+        <swiper-container class="mySwiper" pagination="true" navigation="true" keyboard="true" mousewheel="true"
           slides-per-view="1" space-between="20" breakpoints='{
-          "640": {"slidesPerView": 2, "spaceBetween": 20},
-          "1024": {"slidesPerView": 4, "spaceBetween": 24}
-        }' css-mode="true">
-          <swiper-slide><img src="./assets/img/00.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+      "640": { "slidesPerView": 2, "spaceBetween": 20 },
+      "1024": { "slidesPerView": 4, "spaceBetween": 24 }
+    }' css-mode="true">
+          <swiper-slide>
+            <img src="./assets/img/00.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/01.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/01.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/10.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/10.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/110.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/110.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/3.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/3.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
-          <swiper-slide><img src="./assets/img/00.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block">
+          <swiper-slide>
+            <img src="./assets/img/00.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
           </swiper-slide>
         </swiper-container>
       </div>
+
     </section>
 
 
@@ -563,7 +575,7 @@
       </div>
 
       <div class="relative max-w-6xl mx-auto">
-        <div class="swiper mySwiper overflow-hidden">
+        <div class="swiper mySwiperComments overflow-hidden">
           <div class="swiper-wrapper items-stretch" data-aos="fade-up" data-aos-duration="3000">
 
             <div class="swiper-slide h-auto flex">
@@ -740,89 +752,124 @@
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="text/javascript">
-    window.openModal = function (modalId) {
-      document.getElementById(modalId).style.display = 'flex'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
-
-    window.closeModal = function (modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
-
-    document.onkeydown = function (event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
+  <script>
+    (function () {
+      window.openModal = function (modalId) {
+        document.getElementById(modalId).style.display = 'flex'
+        document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
       }
-    };
-    AOS.init();
+
+      window.closeModal = function (modalId) {
+        document.getElementById(modalId).style.display = 'none'
+        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+      }
+
+      document.onkeydown = function (event) {
+        event = event || window.event;
+        if (event.keyCode === 27) {
+          document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+          let modals = document.getElementsByClassName('modal');
+          Array.prototype.slice.call(modals).forEach(i => {
+            i.style.display = 'none'
+          })
+        }
+      };
+      AOS.init();
+
+    })()
+
+
+    (function () {
+      document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.mySwiper', {
+          loop: true,
+          spaceBetween: 30,
+          slidesPerView: 1,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            }
+          }
+        });
+      });
+
+    })()
+
+    (function () {
+      document.addEventListener('DOMContentLoaded', function () {
+        const swiperComments = new Swiper('.mySwiperComments', {
+          loop: true,
+          spaceBetween: 30,
+          slidesPerView: 1,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            }
+          }
+        });
+
+
+      });
+
+    })()
+
+    (function () {
+      function toPersianDigits(str) {
+        const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
+        return str.toString().replace(/\d/g, (d) => persianDigits[d]);
+      }
+
+      function convertAllNumbersToPersian(root = document.body) {
+        const treeWalker = document.createTreeWalker(
+          root,
+          NodeFilter.SHOW_TEXT, {
+            acceptNode: function (node) {
+              return /\d/.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+            },
+          },
+          false
+        );
+
+        while (treeWalker.nextNode()) {
+          const currentNode = treeWalker.currentNode;
+          currentNode.nodeValue = toPersianDigits(currentNode.nodeValue);
+        }
+      }
+
+      window.addEventListener("load", () => {
+        convertAllNumbersToPersian();
+      });
+
+    })()
   </script>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   <!-- <script src="./node_modules/swiper/swiper-bundle.min.js"></script> -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const swiper = new Swiper('.mySwiper', {
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 1,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          }
-        }
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Swiper برای بخش نظرات (Comments)
-      const swiperComments = new Swiper('.mySwiper', {
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 1,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          }
-        }
-      });
 
-      // اگر از swiper-element برای گالری استفاده می‌کنید، نیازی به این کد نیست:
-      // const swiperGallery = document.querySelector('#swiperGallery .mySwiperGallery');
-      // if (swiperGallery) {
-      //   swiperGallery.swiper.update(); // یا هر عملیات دیگر نیاز
-      // }
-    });
-  </script>
+
+
 
 
 

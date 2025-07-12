@@ -543,6 +543,34 @@
 
 
 
+    <script>
+        function toPersianDigits(str) {
+            const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
+            return str.toString().replace(/\d/g, (d) => persianDigits[d]);
+        }
+
+        function convertAllNumbersToPersian(root = document.body) {
+            const treeWalker = document.createTreeWalker(
+                root,
+                NodeFilter.SHOW_TEXT, {
+                    acceptNode: function (node) {
+                        return /\d/.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+                    },
+                },
+                false
+            );
+
+            while (treeWalker.nextNode()) {
+                const currentNode = treeWalker.currentNode;
+                currentNode.nodeValue = toPersianDigits(currentNode.nodeValue);
+            }
+        }
+
+        // اجرا بعد از لود کامل صفحه
+        window.addEventListener("load", () => {
+            convertAllNumbersToPersian();
+        });
+    </script>
 
 </body>
 
