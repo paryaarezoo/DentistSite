@@ -68,19 +68,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // }
 });
 
-const num = 123456;
-const persianNumber = num.toLocaleString("fa-IR");
 
-console.log(persianNumber); 
-function convertAllNumbersToPersian() {
-  const elements = document.querySelectorAll("body *:not(script):not(style)");
-
-  elements.forEach(el => {
-    if (el.children.length === 0 && el.innerText.match(/\d/)) {
-      el.innerText = toPersianDigits(el.innerText);
-    }
-  });
-}
-
-window.onload = convertAllNumbersToPersian;
 

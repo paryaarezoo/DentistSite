@@ -8,13 +8,18 @@
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DentistSite</title>
-  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./src/style.css" />
 
+  <!-- Fonts -->
   <link rel="stylesheet" href="./assets/fonts/pelak/pelak-font-face.css">
   <link rel="stylesheet" href="./assets/fonts/moraba/moraba-font-face.css">
-  <link rel="stylesheet" href="./node_modules/remixicon/fonts/remixicon.css">
+
+  <!-- CDN -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- modules -->
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./node_modules/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="./src/style.css" />
 </head>
 
 <body class="light-mode">
@@ -307,7 +312,6 @@
 
   </div>
 
-
   <main class="container mx-auto">
     <section data-aos="fade-up" data-aos-anchor-placement="top-bottom"
       class="onlineReserve lg:text-start text-center shadow-lg absolute lg:h-[120px] h-auto rounded-xl left-0 right-0 lg:-bottom-[100px] -bottom-[280px] mb-10 z-10 flex flex-col items-center justify-center gap-4 max-w-screen-xl mx-auto bg-white lg:p-0 p-2">
@@ -333,7 +337,6 @@
 
 
     </section>
-
 
     <section class="service container mx-auto lg:mt-36 mt-72 px-9 pt-8 ">
 
@@ -493,8 +496,6 @@
       </div>
     </section>
 
-
-
     <section class="container mx-auto mt-20 px-9 flex flex-col justify-center mb-20 pb-20" id="gallery">
       <div class="Service flex items-center gap-3 mb-8">
         <i class="ri-tooth-fill text-accent text-6xl"></i>
@@ -503,47 +504,54 @@
           <span class="text-slate-600">یک لبخند با اعتماد به نفس</span>
         </div>
       </div>
-
-      <div id="swiperImg" data-aos="fade-up" data-aos-duration="2000">
-        <swiper-container class="mySwiper" pagination="true" navigation="true" keyboard="true" mousewheel="true"
-          slides-per-view="1" space-between="20" breakpoints='{
-      "640": { "slidesPerView": 2, "spaceBetween": 20 },
-      "1024": { "slidesPerView": 4, "spaceBetween": 24 }
-    }' css-mode="true">
-          <swiper-slide>
-            <img src="./assets/img/00.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/01.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/10.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/110.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/3.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./assets/img/00.jpg" alt="DrNaebi|gallery" class="rounded-3xl w-full block" />
-          </swiper-slide>
-        </swiper-container>
+      <div class="swiper gallery-swiper h-96">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide  h-[150px] gallery">
+            <img src="./assets/img/00.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+          <div class="swiper-slide h-[150px] gallery">
+            <img src="./assets/img/01.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+          <div class="swiper-slide h-[150px] gallery">
+            <img src="./assets/img/10.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+          <div class="swiper-slide h-[150px] gallery">
+            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+          <div class="swiper-slide h-[150px] gallery">
+            <img src="./assets/img/110.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+          <div class="swiper-slide h-[150px] gallery">
+            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+          <div class="swiper-slide h-[150px] gallery">
+            <img src="./assets/img/3.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+          <div class="swiper-slide  h-[150px] gallery">
+            <img src="./assets/img/11.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl block w-full h-full object-cover object-center" />
+          </div>
+          <div class="swiper-slide h-[150px] gallery">
+            <img src="./assets/img/00.jpg" alt="DrNaebi|gallery"
+              class="rounded-3xl w-full h-full object-cover block object-center" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
 
+
+
+
     </section>
-
-
-
 
     <section class="about rounded-2xl container mx-auto  px-6 mb-20 lg:flex items-center justify-center">
       <div class=" mt-6 md:mt-0 lg:mx-0" data-aos="zoom-in">
@@ -574,74 +582,93 @@
         <h1 class="text-2xl font-bold text-accent mt-2">نظرات مراجعین ما</h1>
       </div>
 
-      <div class="relative max-w-6xl mx-auto">
+
+      <div class="swiper gallery-swiper h-96">
+        <div class="swiper-wrapper items-stretch">
+          <div class="swiper-slide h-auto flex  comments">
+            <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
+              <div>
+                <img src="./assets/img/elon.jpg" alt="DrNaebi|customer"
+                  class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
+              </div>
+              <p class="text-gray-700 leading-relaxed flex-1 overflow-y-auto">
+                تجربه‌ی من در این کلینیک واقعاً شبیه یک سفر علمی به آینده بود. تکنولوژی لیزر و اسکن‌های سه‌بعدی‌ شون
+                جوری بود که حس کردم وسط آزمایشگاه اسپیس‌ایکس هستم. اگه قرار باشه مارس رو کلون کنیم، امیدوارم اون‌جا هم
+                همچین دندانپزشکی‌هایی باشه. شاید بشه درمان ریشه رو با نور ستاره انجام داد...
+              </p>
+              <p class="text-sm font-bold text-right mt-4 text-gray-900">ایلان ماسک</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide h-auto flex comments">
+            <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
+              <div>
+                <img src="./assets/img/nietzsche.jpg" alt="DrNaebi|customer"
+                  class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
+              </div>
+              <p class="text-gray-700 leading-relaxed flex-1 overflow-y-auto">
+                درد، آن آموزگار بزرگ است. هنگام درمان ریشه، در لحظه‌ای که مته به گوشت می‌رسد، انسان نه تنها با ضعف جسم،
+                بلکه با حقیقت وجود خود روبه‌رو می‌شود. اما دندان‌پزشک این کلینیک، با اراده‌ای معطوف به دقت و زیبایی،
+                کاری کرد که درد، به خنده‌ای دیونیزوسی بدل شود. آنان که از دندان‌پزشکی می‌هراسند، هنوز خود را نیافته‌اند.
+                باش! قوی باش! و بی‌بی‌حسی، درمانت را بپذیر.
+              </p>
+              <p class="text-sm font-bold text-right mt-4 text-gray-900">فردیش نیچه</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide h-auto flex comments">
+            <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
+              <div>
+                <img src="./assets/img/lion.jpg" alt="DrNaebi|customer"
+                  class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
+              </div>
+              <p class="text-gray-700 leading-relaxed flex-1 overflow-y-auto">
+                تجربه‌ام بعد از دندانپزشکی واقعاً جالب بود. کار دکتر خیلی سریع تموم شد و اصلاً انتظار نداشتم این‌قدر زود
+                تمام بشه. به دکتر گفتم که چطور این‌قدر سریع شد، اونم با خنده گفت که خودتم بعداً می‌فهمی چی شد.
+              </p>
+              <p class="text-sm font-bold text-right mt-4 text-gray-900">الیار قدیمی</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide h-auto flex comments">
+            <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
+              <div>
+                <img src="./assets/img/wolf.jpg" alt="DrNaebi|customer"
+                  class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
+              </div>
+              <p class="text-gray-700 leading-relaxed flex-1 overflow-y-auto">
+                دندونم حسابی درد می‌کرد و با استرس رفتم پیش دکتر. نزدیک به دو ساعت منتظر موندم متاسفانه. بهم مسکن دادن و
+                گفتن که بی‌حسی می‌زنن، چیزی حس نمی‌کنی. کار دکتر خیلی خوب بود. بعدش دیگه نفهمیدم درد رفع شده یا فقط یادم
+                رفت بهش فکر کنم!
+              </p>
+              <p class="text-sm font-bold text-right mt-4 text-gray-900">اتنا</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <!-- <div class="relative max-w-6xl mx-auto">
         <div class="swiper mySwiperComments overflow-hidden">
           <div class="swiper-wrapper items-stretch" data-aos="fade-up" data-aos-duration="3000">
 
             <div class="swiper-slide h-auto flex">
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
-                <div>
-                  <img src="./assets/img/elon.jpg" alt="DrNaebi|customer"
-                    class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
-                </div>
-                <p class="text-gray-700 leading-relaxed flex-1">تجربه‌ی من در این کلینیک واقعاً شبیه یک سفر علمی به
-                  آینده بود.
-                  تکنولوژی لیزر و اسکن‌های سه‌بعدی‌ شون جوری بود که حس کردم وسط آزمایشگاه اسپیس‌ایکس هستم. اگه قرار باشه
-                  مارس رو کلون کنیم، امیدوارم اون‌جا هم همچین دندانپزشکی‌هایی باشه. شاید بشه درمان ریشه رو با نور ستاره
-                  انجام داد...</p>
-                <p class="text-sm font-bold text-right mt-4 text-gray-900">ایلان ماسک</p>
-              </div>
+
             </div>
 
             <div class="swiper-slide h-auto flex">
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
-                <div>
-                  <img src="./assets/img/nietzsche.jpg" alt="DrNaebi|customer"
-                    class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
-                </div>
-                <p class="text-gray-700 leading-relaxed flex-1">درد، آن آموزگار بزرگ است. هنگام درمان ریشه، در لحظه‌ای
-                  که مته
-                  به
-                  گوشت می‌رسد، انسان نه تنها با ضعف جسم، بلکه با حقیقت وجود خود روبه‌رو می‌شود.
-                  اما دندان‌پزشک این کلینیک، با اراده‌ای معطوف به دقت و زیبایی، کاری کرد که درد، به خنده‌ای دیونیزوسی
-                  بدل
-                  شود.
-                  آنان که از دندان‌پزشکی می‌هراسند، هنوز خود را نیافته‌اند.
-                  باش! قوی باش! و بی‌بی‌حسی، درمانت را بپذیر.</p>
-                <p class="text-sm font-bold text-right mt-4 text-gray-900">فردیش نیچه</p>
-              </div>
+
             </div>
 
             <div class="swiper-slide h-auto flex">
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
-                <div>
-                  <img src="./assets/img/lion.jpg" alt="DrNaebi|customer"
-                    class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg">
-                </div>
 
-                <p class="text-gray-700 leading-relaxed flex-1">تجربه‌ام بعد از دندانپزشکی واقعاً جالب بود. کار دکتر
-                  خیلی سریع
-                  تموم شد و اصلاً انتظار نداشتم این‌قدر زود تمام بشه. به دکتر گفتم که چطور این‌قدر سریع شد، اونم با خنده
-                  گفت که خودتم بعداً می‌فهمی چی شد.</p>
-                <p class="text-sm font-bold text-right mt-4 text-gray-900">سیامک باقری</p>
-              </div>
             </div>
 
 
             <div class="swiper-slide h-auto flex">
-              <div class="bg-white rounded-xl p-6 text-right shadow-md max-w-md mx-auto h-full flex flex-col">
-                <div>
-                  <img src="./assets/img/wolf.jpg" alt="DrNaebi|customer"
-                    class="w-[110px] h-[110px] rounded-full mx-auto mb-4 shadow-lg ">
-                </div>
-                <p class="text-gray-700 leading-relaxed flex-1">دندونم حسابی درد می‌کرد و با استرس رفتم پیش دکتر. نزدیک
-                  به دو
-                  ساعت منتظر موندم متاسفانه. بهم مسکن دادن و
-                  گفتن که بی‌حسی می‌زنن، چیزی حس نمی‌کنی. کار دکتر خیلی خوب بود. بعدش دیگه نفهمیدم درد رفع شده یا فقط
-                  یادم
-                  رفت بهش فکر کنم!</p>
-                <p class="text-sm font-bold text-right mt-4 text-gray-900">ناصر</p>
-              </div>
+
             </div>
 
           </div>
@@ -651,7 +678,7 @@
           <div class="swiper-button-next text-primary bg-primary/35 p-7 rounded-full"></div>
           <div class="swiper-button-prev text-primary bg-primary/35 p-7 rounded-full"></div>
         </div>
-      </div>
+      </div> -->
     </section>
 
   </main>
@@ -667,10 +694,6 @@
       </svg>
     </a>
   </section>
-
-
-
-
 
   <footer class="flex flex-col items-center justify-between w-full mt-12 px-4 sm:px-6 lg:px-12 pt-8">
     <div class="flex flex-col lg:flex-row bg-gray-300 rounded-3xl justify-between w-full gap-4 px-6 sm:px-8 py-5">
@@ -739,21 +762,18 @@
   </footer>
 
 
-
-
-
-
-
-
-  <script src="./src/main.js"></script>
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
-  <script src="./node_modules/swiper/swiper-element-bundle.min.js"></script>
-
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="./src/main.js"></script> -->
+  <!-- <script src="./node_modules/swiper/swiper.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+
+
   <script>
     (function () {
+
+      AOS.init();
+
       window.openModal = function (modalId) {
         document.getElementById(modalId).style.display = 'flex'
         document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
@@ -774,95 +794,124 @@
           })
         }
       };
-      AOS.init();
-
     })()
 
-
-    (function () {
-      document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.mySwiper', {
-          loop: true,
-          spaceBetween: 30,
-          slidesPerView: 1,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            }
-          }
-        });
-      });
-
-    })()
-
-    (function () {
-      document.addEventListener('DOMContentLoaded', function () {
-        const swiperComments = new Swiper('.mySwiperComments', {
-          loop: true,
-          spaceBetween: 30,
-          slidesPerView: 1,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            }
-          }
-        });
-
-
-      });
-
-    })()
-
-    (function () {
-      function toPersianDigits(str) {
-        const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
-        return str.toString().replace(/\d/g, (d) => persianDigits[d]);
-      }
-
-      function convertAllNumbersToPersian(root = document.body) {
-        const treeWalker = document.createTreeWalker(
-          root,
-          NodeFilter.SHOW_TEXT, {
-            acceptNode: function (node) {
-              return /\d/.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
-            },
-          },
-          false
-        );
-
-        while (treeWalker.nextNode()) {
-          const currentNode = treeWalker.currentNode;
-          currentNode.nodeValue = toPersianDigits(currentNode.nodeValue);
+    var swiper = new Swiper(".gallery-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 5,
         }
       }
+    });
 
-      window.addEventListener("load", () => {
-        convertAllNumbersToPersian();
+
+    (function () {
+      var swiper = new Swiper(".gallery-swiper", {
+        // اگر می‌خواهید هر بار یک اسلاید کامل نشان داده شود
+        slidesPerView: 1,
+        // فاصله بین اسلایدها (می‌توانید تغییر دهید)
+        spaceBetween: 30,
+        // حالت حلقه بی‌وقفه
+        loop: true,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true, // باعث می‌شود نشانگرهای صفحات قابل کلیک باشند
+        },
+        mousewheel: true,
+        keyboard: true,
+
+        // اگر می‌خواهید اسلایدر واکنش‌گرا (responsive) باشد و در اندازه‌های مختلف صفحه، تعداد اسلایدها تغییر کند
+        breakpoints: {
+          // وقتی عرض صفحه 640px یا بیشتر باشد
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // وقتی عرض صفحه 768px یا بیشتر باشد
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          // وقتی عرض صفحه 1024px یا بیشتر باشد
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+        // cssMode: true, // این را حذف کنید مگر اینکه دقیقا به آن نیاز داشته باشید
       });
+    })();
 
-    })()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // (function () {
+    //   function toPersianDigits(str) {
+    //     const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
+    //     return str.toString().replace(/\d/g, (d) => persianDigits[d]);
+    //   }
+
+    //   function convertAllNumbersToPersian(root = document.body) {
+    //     const treeWalker = document.createTreeWalker(
+    //       root,
+    //       NodeFilter.SHOW_TEXT, {
+    //         acceptNode: function (node) {
+    //           return /\d/.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+    //         },
+    //       },
+    //       false
+    //     );
+
+    //     while (treeWalker.nextNode()) {
+    //       const currentNode = treeWalker.currentNode;
+    //       currentNode.nodeValue = toPersianDigits(currentNode.nodeValue);
+    //     }
+    //   }
+
+    //   window.addEventListener("load", () => {
+    //     convertAllNumbersToPersian();
+    //   });
+
+    // })()
   </script>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
@@ -873,7 +922,6 @@
 
 
 
-  <script src="./node_modules/swiper/swiper.js"></script>
 
 </body>
 

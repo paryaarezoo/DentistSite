@@ -227,88 +227,67 @@ header {
   }
 }
 
-swiper-container {
-  overflow-y: visible;
 
-
-}
-
-swiper-container::part(button-prev),
-swiper-container::part(button-next) {
-
-  background-color: rgba(0, 164, 176, 0.35);
-  padding: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 9999px;
-  color: #00a4b0;
-}
-
-swiper-container::part(pagination) {
-  
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 5rem;
-  transform: translateY(10px);
-}
-
-
-
-#swiperImg {
-  position: relative;
+/* در فایل CSS شما یا تگ <style> */
+.swiper {
+  width: 100%;
+  /* عرض اسلایدر را تمام صفحه کنید */
   height: 100%;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #fff;
-  margin: 0;
-  padding: 0;
 }
 
-swiper-container {
+.swiper-wrapper {
+  padding: 3.5rem 0;
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  /* برای هم‌ترازی عمودی و افقی */
+  justify-content: center;
+  /* محتوا را در مرکز افقی قرار می‌دهد */
+  align-items: center;
+  /* محتوا را در مرکز عمودی قرار می‌دهد */
+}
+
+
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* ارتفاع تصویر را ۱۰۰ درصد اسلاید تنظیم می‌کند */
+  /* object-fit: cover; */
+  /* تصویر را برش می‌دهد تا کادر را پر کند بدون اینکه کشیده شود */
+  /* اگر می‌خواهید تصویر کوچک‌تر باشد و فضای خالی اطراف داشته باشد، از 'contain' استفاده کنید: */
+  /* object-fit: contain; */
+/* } */ 
+
+.swiper {
   width: 100%;
   height: 100%;
 }
 
-swiper-slide {
+.swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-swiper-slide img {
+.swiper-slide .gallery img {
   display: block;
-  width: 90%;
-  height: 181px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* swiper-container {
-  --swiper-navigation-color: #00a4b0;
-  --swiper-pagination-bullet-size: 10px;
-  --swiper-pagination-bullet-active-color: #f472b6;
-  --swiper-pagination-color: #f472b6;
-  --swiper-pagination-bullet-inactive-color: #00a4b0;
-  --swiper-pagination-bullet-inactive-opacity: 0.5;
-  --swiper-pagination-bullet-horizontal-gap: 8px;
-} */
-
-/* Add background for navigation buttons */
-
-
-/* .swiper{
-    overflow: hidden;
-  } */
-
-.swiper-pagination-bullet {
-  background-color: #00a4b0;
-  opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #00a4b0 !important;
-  opacity: 1 !important;
+.swiper-slide .comments img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
