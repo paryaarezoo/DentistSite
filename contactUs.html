@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
   <title>DentistSite</title>
-  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./src/style.css" />
+  <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/assets/styles/style.css" />
 
-  <link rel="stylesheet" href="./assets/fonts/pelak/pelak-font-face.css">
-  <link rel="stylesheet" href="./assets/fonts/moraba/moraba-font-face.css">
-  <link rel="stylesheet" href="./node_modules/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="/assets/fonts/pelak/pelak-font-face.css">
+  <link rel="stylesheet" href="/assets/fonts/moraba/moraba-font-face.css">
+  <link rel="stylesheet" href="/node_modules/remixicon/fonts/remixicon.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -60,7 +61,7 @@
       </div>
 
       <div class="header px-3 w-full justify-between items-center py-2 flex gap-2 sticky">
-        <img src="./assets/img/423432.png" alt="DrNaebi|logo" class="w-[130px]">
+        <img src="/assets/img/logo.PNG" alt="DrNaebi|logo" class="w-[130px]">
 
         <nav class="relative">
           <div class="relative w-10 h-10 flex lg:hidden mx-auto z-50">
@@ -97,7 +98,7 @@
 
 
             <li class="relative group">
-              <a href="./aboutUs.html" target="_blank" class="flex items-center gap-1"
+              <a href="/aboutUs.html" target="_blank" class="flex items-center gap-1"
                 class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2 ">
                 درباره ما
                 <i class="ri-arrow-down-s-fill"></i>
@@ -113,7 +114,7 @@
 
 
 
-            <li><a href="./contactUs.html"
+            <li><a href="/contactUs.html"
                 class=" hover:bg-accent hover:text-white rounded-full transition-all duration-300 p-2">تماس با ما</a>
             </li>
 
@@ -464,92 +465,150 @@
 
 
 
-  <script src="./src/main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 
 
+
+  <script src="/assets/js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="text/javascript">
-    window.openModal = function (modalId) {
-      document.getElementById(modalId).style.display = 'flex'
-      document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-    }
+  <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="./node_modules/swiper/swiper.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
 
-    window.closeModal = function (modalId) {
-      document.getElementById(modalId).style.display = 'none'
-      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-    }
 
-    document.onkeydown = function (event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-        let modals = document.getElementsByClassName('modal');
-        Array.prototype.slice.call(modals).forEach(i => {
-          i.style.display = 'none'
-        })
-      }
-    };
-    AOS.init();
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const swiper = new Swiper('.mySwiper', {
-        loop: true,
-        spaceBetween: 30,
+    (function () {
+
+      AOS.init();
+
+      window.openModal = function (modalId) {
+        document.getElementById(modalId).style.display = 'flex'
+        document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+      }
+
+      window.closeModal = function (modalId) {
+        document.getElementById(modalId).style.display = 'none'
+        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+      }
+
+      document.onkeydown = function (event) {
+        event = event || window.event;
+        if (event.keyCode === 27) {
+          document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+          let modals = document.getElementsByClassName('modal');
+          Array.prototype.slice.call(modals).forEach(i => {
+            i.style.display = 'none'
+          })
+        }
+      };
+    })()
+
+    var swiper = new Swiper(".gallery-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 5,
+        }
+      }
+    });
+
+
+    (function () {
+      var swiper = new Swiper(".gallery-swiper", {
+        // اگر می‌خواهید هر بار یک اسلاید کامل نشان داده شود
         slidesPerView: 1,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
+        // فاصله بین اسلایدها (می‌توانید تغییر دهید)
+        spaceBetween: 30,
+        // حالت حلقه بی‌وقفه
+        loop: true,
+
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true, // باعث می‌شود نشانگرهای صفحات قابل کلیک باشند
+        },
+        mousewheel: true,
+        keyboard: true,
+
+        // اگر می‌خواهید اسلایدر واکنش‌گرا (responsive) باشد و در اندازه‌های مختلف صفحه، تعداد اسلایدها تغییر کند
         breakpoints: {
+          // وقتی عرض صفحه 640px یا بیشتر باشد
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // وقتی عرض صفحه 768px یا بیشتر باشد
           768: {
             slidesPerView: 2,
+            spaceBetween: 40,
           },
+          // وقتی عرض صفحه 1024px یا بیشتر باشد
           1024: {
             slidesPerView: 3,
-          }
-        }
-      });
-    });
-  </script>
-
-
-  <script>
-    function toPersianDigits(str) {
-      const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
-      return str.toString().replace(/\d/g, (d) => persianDigits[d]);
-    }
-
-    function convertAllNumbersToPersian(root = document.body) {
-      const treeWalker = document.createTreeWalker(
-        root,
-        NodeFilter.SHOW_TEXT, {
-          acceptNode: function (node) {
-            return /\d/.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+            spaceBetween: 50,
           },
         },
-        false
-      );
+        // cssMode: true, // این را حذف کنید مگر اینکه دقیقا به آن نیاز داشته باشید
+      });
+    })();
 
-      while (treeWalker.nextNode()) {
-        const currentNode = treeWalker.currentNode;
-        currentNode.nodeValue = toPersianDigits(currentNode.nodeValue);
+    (function () {
+
+
+      const englishToPersianNumbers = {
+        '0': '۰',
+        '1': '۱',
+        '2': '۲',
+        '3': '۳',
+        '4': '۴',
+        '5': '۵',
+        '6': '۶',
+        '7': '۷',
+        '8': '۸',
+        '9': '۹'
+      };
+
+      function convertEnglishToPersianNumbers(text) {
+        return text.replace(/[0-9]/g, (match) => englishToPersianNumbers[match]);
       }
-    }
 
-    // اجرا بعد از لود کامل صفحه
-    window.addEventListener("load", () => {
-      convertAllNumbersToPersian();
-    });
+      function convertNumbersInElement(element) {
+        if (element.hasChildNodes()) {
+          element.childNodes.forEach(child => convertNumbersInElement(child));
+        } else if (element.nodeType === Node.TEXT_NODE) {
+          element.textContent = convertEnglishToPersianNumbers(element.textContent);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        convertNumbersInElement(document.body);
+      });
+
+    })()
   </script>
 
 

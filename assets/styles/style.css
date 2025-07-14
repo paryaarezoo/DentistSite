@@ -243,7 +243,7 @@ header {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   display: flex;
   /* برای هم‌ترازی عمودی و افقی */
   justify-content: center;
