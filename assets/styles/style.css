@@ -25,7 +25,7 @@
 }
 
 .dark-mode {
-  --color-background: #212121;
+  --color-background: #003438;
   --color-default: #f3f4f6;
   /* --color-accent: #4A90E2; */
 }
@@ -43,8 +43,48 @@ body {
 
 }
 
+
+body.dark-mode section.onlineReserve {
+  background-color: #1d5155;
+  color: white;
+}
+
+body.light-mode section.onlineReserve {
+  background-color: white;
+}
+
+body.dark-mode .cardService {
+  background-color: #1d5155;
+}
+
+body.light-mode .cardService {
+  background-color: white;
+}
+
+body.dark-mode #comments {
+  background-color: #1d5155;
+}
+body.light-mode #comments {
+  background-color: white;
+}
+
+body.light-mode #commentsContent {
+  color: #696969;
+}
+
+body.dark-mode .topFooter {
+  background-color: #1d5155;
+}
+body.light-mode .topFooter {
+  background-color: #D3D3D3;
+}
+
 .socialIcons {
   background-color: var(--color-background);
+}
+
+body.dark-mode .aboutUsHead {
+  color: #1d5155;
 }
 
 header {
