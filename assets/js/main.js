@@ -38,7 +38,6 @@ if (openIcon && closeIcon && navList) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Swiper برای بخش نظرات (Comments)
     const swiperComments = new Swiper('.mySwiperComments', {
         loop: true,
         spaceBetween: 30,

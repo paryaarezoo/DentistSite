@@ -5,19 +5,29 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/img/favicon-32x32.png">
   <link rel="manifest" href="/site.webmanifest">
-<meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">  <title>DentistSite</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+  <title>DentistSite</title>
 
   <!-- Fonts -->
   <link rel="stylesheet" href="/assets/fonts/pelak/pelak-font-face.css">
   <link rel="stylesheet" href="/assets/fonts/moraba/moraba-font-face.css">
 
   <!-- CDN -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
   <!-- modules -->
-  <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="/node_modules/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+    integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/node_modules/remixicon/fonts/remixicon.css"> -->
   <link rel="stylesheet" href="/assets/styles/style.css" />
 </head>
 
@@ -322,7 +332,7 @@
 
           <div class="reserveContent lg:text-start ">
             <h2 class="text-2xl font-bold pb-2 ">رزرو آنلاین نوبت</h2>
-            <p >برای رزرو آنلاین نوبت، لطفا روی دکمه زیر کلیک کنید.</p>
+            <p>برای رزرو آنلاین نوبت، لطفا روی دکمه زیر کلیک کنید.</p>
           </div>
         </div>
         <div
@@ -760,10 +770,57 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
 
-  <script src="/assets/js/main.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+      let openIcon = document.getElementById('btnHamburger');
+      let closeIcon = document.getElementById('hamburgerMenu');
+      let navList = document.getElementById('navList');
+
+      let themeSwitch = document.getElementById('themeSwitch');
+
+      themeSwitch.addEventListener('click', () => {
+        let body = document.body;
+        console.log(body);
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          body.classList.add('light-mode');
+        }
+        else {
+          body.classList.remove('light-mode');
+          body.classList.add('dark-mode');
+        }
+      })
+
+      if (openIcon && closeIcon && navList) {
+        openIcon.addEventListener('click', () => {
+          openIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          closeIcon.classList.add('flex');
+          navList.classList.remove('hidden')
+
+        });
+
+        closeIcon.addEventListener('click', () => {
+          closeIcon.classList.add('hidden');
+          openIcon.classList.remove('hidden');
+          navList.classList.add('hidden')
+
+        });
+      }
+    })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+    integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- <script src="/assets/js/main.js"></script> -->
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/node_modules/swiper/swiper-bundle.min.js"></script> -->
   <!-- <script src="./node_modules/swiper/swiper.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
 
@@ -793,46 +850,44 @@
           })
         }
       };
-    })()
-
-    var swiper = new Swiper(".gallery-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      mousewheel: true,
-      keyboard: true,
-      breakpoints: {
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        992: {
-          slidesPerView: 4,
-        },
-        1200: {
-          slidesPerView: 5,
-        }
-      }
-    });
-
+    })();
 
     (function () {
       var swiper = new Swiper(".gallery-swiper", {
-        // اگر می‌خواهید هر بار یک اسلاید کامل نشان داده شود
         slidesPerView: 1,
-        // فاصله بین اسلایدها (می‌توانید تغییر دهید)
         spaceBetween: 30,
-        // حالت حلقه بی‌وقفه
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 5,
+          }
+        }
+      });
+    })();
+
+    (function () {
+      var swiper = new Swiper(".gallery-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
         loop: true,
 
         navigation: {
@@ -841,36 +896,28 @@
         },
         pagination: {
           el: ".swiper-pagination",
-          clickable: true, // باعث می‌شود نشانگرهای صفحات قابل کلیک باشند
+          clickable: true,
         },
         mousewheel: true,
         keyboard: true,
-
-        // اگر می‌خواهید اسلایدر واکنش‌گرا (responsive) باشد و در اندازه‌های مختلف صفحه، تعداد اسلایدها تغییر کند
         breakpoints: {
-          // وقتی عرض صفحه 640px یا بیشتر باشد
           640: {
             slidesPerView: 1,
             spaceBetween: 20,
           },
-          // وقتی عرض صفحه 768px یا بیشتر باشد
           768: {
             slidesPerView: 2,
             spaceBetween: 40,
           },
-          // وقتی عرض صفحه 1024px یا بیشتر باشد
           1024: {
             slidesPerView: 3,
             spaceBetween: 50,
           },
         },
-        // cssMode: true, // این را حذف کنید مگر اینکه دقیقا به آن نیاز داشته باشید
       });
     })();
 
     (function () {
-
-
       const englishToPersianNumbers = {
         '0': '۰',
         '1': '۱',
