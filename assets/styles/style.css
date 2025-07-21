@@ -64,6 +64,7 @@ body.light-mode .cardService {
 body.dark-mode #comments {
   background-color: #1d5155;
 }
+
 body.light-mode #comments {
   background-color: white;
 }
@@ -75,9 +76,22 @@ body.light-mode #commentsContent {
 body.dark-mode .topFooter {
   background-color: #1d5155;
 }
+
 body.light-mode .topFooter {
-  background-color: #D3D3D3;
+  background-color: white;
 }
+
+body.light-mode .headLayer {
+  background-color: rgb(0 0 0 / 0.4);
+}
+
+body.dark-mode .headLayer {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+
+
+
 
 .socialIcons {
   background-color: var(--color-background);
@@ -299,11 +313,11 @@ header {
   width: 100%;
   height: 100%;
   /* ارتفاع تصویر را ۱۰۰ درصد اسلاید تنظیم می‌کند */
-  /* object-fit: cover; */
-  /* تصویر را برش می‌دهد تا کادر را پر کند بدون اینکه کشیده شود */
-  /* اگر می‌خواهید تصویر کوچک‌تر باشد و فضای خالی اطراف داشته باشد، از 'contain' استفاده کنید: */
-  /* object-fit: contain; */
-/* } */ 
+/* object-fit: cover; */
+/* تصویر را برش می‌دهد تا کادر را پر کند بدون اینکه کشیده شود */
+/* اگر می‌خواهید تصویر کوچک‌تر باشد و فضای خالی اطراف داشته باشد، از 'contain' استفاده کنید: */
+/* object-fit: contain; */
+/* } */
 
 .swiper {
   width: 100%;
